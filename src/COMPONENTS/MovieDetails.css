@@ -1,0 +1,27 @@
+.movie-details {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .movie-details img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 2rem;
+  }
+  
+  .movie-info {
+    max-width: 600px;
+  }
+  
+  .movie-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .movie-info p {
+    margin-bottom: 1rem;
+  }
+  

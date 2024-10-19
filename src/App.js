@@ -4,17 +4,24 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from './COMPONENTS/Header.js';
 import MovieGridRedux from './COMPONENTS/Moviegridredux'; 
 import SearchResults from "./COMPONENTS/SearchResults";
-import MovieDetail from './COMPONENTS/MovieDetails'; // Import the MovieDetail component
+import MovieDetail from './COMPONENTS/MovieDetails'; 
 import "./App.css";
-
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className='app'>
         <Header />
+        <div className="main-content"></div>
+
+
         <ResponsiveDrawer />
-        <main style={{ marginLeft: "240px", marginTop: "64px", padding: "20px" }}>
+        <main style={{
+          marginLeft: "240px", // Adjusted for desktop layout
+          marginTop: "64px", 
+          padding: "20px",
+          transition: "margin 0.3s ease",
+        }}>
           <Routes>
             <Route path="/" element={<MovieGridRedux category="popular" />} />
             <Route path="/action" element={<MovieGridRedux category="action" />} />
@@ -28,8 +35,7 @@ function App() {
             <Route path="/science-fiction" element={<MovieGridRedux category="scienceFiction" />} />
             <Route path="/animation" element={<MovieGridRedux category="animation" />} />
             <Route path="/documentary" element={<MovieGridRedux category="documentary" />} />
-            <Route path="/movie/:id" element={<MovieDetail />}/>
-            <Route path="/movie/category/:category" element={<MovieGridRedux />} /> {/* Route for movie details */}
+            <Route path="/movie/:id" element={<MovieDetail />} />
             <Route path="/search" element={<SearchResults />} />
           </Routes>
         </main>

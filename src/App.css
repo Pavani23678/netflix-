@@ -94,3 +94,14 @@ movie-grid {
     font-size: 0.8rem;
   }
 }
+/* src/App.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+}
