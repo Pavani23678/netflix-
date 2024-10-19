@@ -108,7 +108,7 @@ export default function Header() {
             component="div"
             sx={{ flexGrow: 1, paddingLeft: 65, display: { xs: 'none', sm: 'block', color: 'red', fontWeight: 700, fontSize: '50px' } }}
           >
-            NETFLIX
+            REELFLOW
           </Typography>
           <Search sx={{border:'1px solid red'}}>
             <SearchIconWrapper sx={{ color: 'red' }}>
